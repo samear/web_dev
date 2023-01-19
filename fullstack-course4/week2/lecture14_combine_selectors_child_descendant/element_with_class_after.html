@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Element with Class Selector</title>
+        <style>
+            /* all with class="highlight" */
+            .highlight {
+                background-color: green;
+            }
+            
+            /* all p elements with class="highlight" */
+            p.highlight {
+                font-style: italic;
+            }
+
+            /* all elements with class 'highlight' as well as with class 'mainpoint'. */
+            .highlight.mainpoint {
+                color: red;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="highlight">Element with Class Selectors</h1>
+        <p>In CSS, selectors are defined in the CSS Selectors specification; like any other part of CSS they need to
+            have support in browsers for them to work. The majority of selectors that you will come across are defined
+            in the Level 3 Selectors specification and Level 4 Selectors specification, which are both mature
+            specifications, therefore you will find excellent browser support for these selectors.
+        </p>
+        <p class="highlight">This is P with CLASS="highlight"</p>
+        <div class="mainpoint highlight">This is the main point of the entire article.</div>
+    </body>
+</html>

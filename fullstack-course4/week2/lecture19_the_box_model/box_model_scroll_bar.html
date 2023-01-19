@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Box Model</title>
+        <style>
+            /*border-box is new in CCS3*/
+            /*the * means apply every every element to border-box*/
+            * {
+                box-sizing: border-box;
+                margin: 0;  /*apply 0 margin to every element from the edge*/
+                padding: 0; /*apply 0 padding to every element*/
+            }
+            body { /*used to fill up background of the entire page*/
+                background-color: rgb(236, 233, 47);
+            }
+            #box { /*used to create the box*/
+                background-color: blue;
+                padding: 10px;                 /*set the outer div to be visible*/
+                border: 5px solid black;     /*set border visible*/
+                margin-top: 50px;              /*set 40px around the box*/
+                width: 300px;                  /*this is the with of the content not the box*/
+                height: 100px;
+                overflow: auto;                /*make the box become scrollable. A fixed height is needed
+                                                 in order scroll bar to appear. Here we have height=100
+                                                 which is smaller than text in the content.*/
+            }
+            #content { /*used for content*/
+                background-color: #90EE90; /*green*/
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            h1 {
+                margin-bottom: 30px;
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Box Model</h1>
+        <div id="box">
+            <div id="content">1. Nothing - A few despondent philosophers—such as Nietzsche, Schopenhauer,
+                and David Benatar—have cast doubts on whether life has any intrinsic meaning, and some
+                people are driven to suicide by depression or negative events in their lives. But most
+                people, fortunately, are able to find lots of reason to value their lives, and in surveys
+                most people report themselves as pretty happy. So nihilism may not be a plausible position.
+            </div>
+        </div>
+
+        <p id="box">hello world!</p>
+    </body>
+</html>

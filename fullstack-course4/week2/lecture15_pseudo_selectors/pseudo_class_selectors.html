@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PSEUDO CLASS SELECTOR</title>
+        <style>
+            .myfont {
+                font-size: large;
+            }
+            a:link, a:visited{
+                text-decoration: none; /*remove underline */
+                color: rgb(255, 127, 244);
+                font-size: 20px;
+            }
+            a:hover {
+                background-color: aquamarine;
+                color:blue;
+            }
+            section1 div:nth-child(even):hover {
+                font-size: 30px;
+                background-color:aqua;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="myfont"> The :link selector is a pseudo-class that target all anchor &lt;a&gt; elements on a page that have an href attribute.</p>
+        <a href="https://css-tricks.com/almanac/selectors/l/link/" target="_blank" title="pseudo class selector">Pseudo Class Selectors</a>
+        <p></p>
+        <section1>
+            <div class="myfont">list 1</div>
+            <div class="myfont">list 2</div>
+            <div class="myfont">list 3</div>
+            <div class="myfont">list 4</div>
+            <div class="myfont">list 5</div>
+        </section1>
+    </body>
+</html>

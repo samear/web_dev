@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Box Model</title>
+        <style>
+            /*border-box is new in CCS3*/
+            /*the * means apply every every element to border-box*/
+            * {
+                box-sizing: border-box;
+                margin: 0;  /*apply 0 margin to every element from the edge*/
+                padding: 0; /*apply 0 padding to every element*/
+            }
+            body { /*used to fill up background of the entire page*/
+                background-color: rgb(236, 233, 47);
+            }
+            #box { /*used to create the box*/
+                background-color: blue;
+                padding: 10px 30px 10px 30px; /*set the outer div to be visible*/
+                border: 20px solid black;    /*set border visible*/
+                margin: 40px;                 /*set 40px around the box*/
+                width: 300px;                  /*this is the with of the content not the box*/
+            }
+            #content { /*used for content*/
+                background-color: #90EE90; /*green*/
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            h1 {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Box Model</h1>
+        <div id="box">
+            <div id="content">CSS The Box Model</div>
+        </div>
+
+        <p id="box">hello world!</p>
+    </body>
+</html>

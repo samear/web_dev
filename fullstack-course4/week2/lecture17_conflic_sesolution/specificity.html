@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Inheritance in CSS</title>
+        <style>
+            /*scoring: style=0, id=0, class=1, # of elements=2 (header and p). score:12*/
+            header.navigation p {
+                color: blue;
+            }
+            /*scoreing: style=0, id=0 class=1, # of elements=1. score: 11*/
+            p.blurb {
+                color: red;
+            }
+            /*scoring: style=0, id=0, class, pseudo, att=0, # of elements=1 but this will win because
+            !important is used.*/
+            /*p {
+                color: green !important;
+            }*/
+        </style>
+    </head>
+    <body>
+        <header class="navigation">
+            <p class="blurb">This article explains what the cascade is and the order
+                in which CSS declarations cascade, covering cascade layers and origin type.
+                Understanding origin precedence is key to understanding the cascade.
+            </p>
+        </header>
+    </body>
+</html>

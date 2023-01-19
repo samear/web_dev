@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Anatomy of a CSS Rule</title>
-        <style>
+        <!-- <style>
             p {
                 color: blue;
                 font-size: 20px;
@@ -15,10 +15,16 @@
                 font-size: 36px;
                 text-align: center;
             }
-        </style>
+            div {
+                color: red;
+                font-size: 50px;
+                text-align: center;
+            }
+        </style> -->
     </head>
     <body>
         <h1>Anatoy ob a CSS Rule</h1>
+        <div>It appears &lt;style&gt; tag can be placed at the bottom.</div>
         <h2>Subheading 1</h2>
         <p>CSS works by associating rules in HTML elements.  These rules govern how the content of specified elements
             should be displayed.  A CSS rule contains two parts: a selector and a declaration.
@@ -33,4 +39,22 @@
             information (color, size, rotation, etc.) and must be listed in a specific order (the exact values
             required and their order depends on the property being set).</p>
     </body>
+    <style>
+        p {
+            color: blue;
+            font-size: 20px;
+            width: 500px;
+        }
+
+        h1 {
+            color: green;
+            font-size: 36px;
+            text-align: center;
+        }
+        div {
+            color: red;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
 </html>
