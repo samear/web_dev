@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Positioning Elements</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                margin-bottom: 15px;
+            }
+            #container {
+                    background-color: #00FFFF;
+                    position: relative;             /*Note, this is relative positioning*/
+            }
+            p {
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+                margin-bottom: 15px;
+            }
+            #p1 {
+                background-color: #A52A2A;
+                position: relative;     /* first we need to set an anchor so that all offsets 
+                                        of this element are going to be relative to its normal  
+                                        document flow position which will remains right here. */
+                top: 65px;              /*now we set postion's vlues*/
+                left: 65px;
+            }
+            #p2 {
+                background-color: #DEB887;
+
+            }
+            #p3 {
+                background-color: #5F9EA0;
+                position: absolute;             /*Note, this is absolute positioning*/
+                top: 0;
+                left: 0;
+            }
+            #p4 {
+                background-color: #FF7F50;
+            }
+            .p1 {
+                background-color: aliceblue;
+                font-size: large;
+                width: 90%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Positioning Elements<h1>
+        <div id="container">
+            <p id="p1">1</p>
+            <p id="p2">2</p>
+            <p id="p3">3</p>
+            <p id="p4">4</p>
+        </div>
+        <p class="p1">we moved box #3 to the old box #1's position. To achieve this we need to add the following
+            container's (blue box) position relative to the header.
+        </p>
+        <ol>
+            <li class="p1">add &quot;position: relative&quot; in the #container id</li>
+            <li class="p1">then add &quot;position: absolute&quot; to #p3 id</li>
+            <li class="p1">and finally, and top: 0 and left: 0 #p3 id</li>
+        </p>
+    </body>
+</html>
