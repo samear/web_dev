@@ -125,6 +125,9 @@ body {
   .navbar-brand p img { /* Start-K */
     height: 20px;
   }
+  .navbar-brand a {
+    font-size: 20px;
+  }
 }
 /* Lecture 33 - Part 2: Fixing Navbar layout, Text, and Dropdown Menus */
 #collapsable-nav a { /* Collapsed nav menu glyph */
