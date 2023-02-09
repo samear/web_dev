@@ -34,7 +34,13 @@
     // function if response is ready and not an error
     function handleResponse(request, responseHandler) {
         if((request.readyState == 4) && (request.status == 200)) {
+            console.log(request);
             responseHandler(request);
+
+        }
+        else {
+            console.log("status = " + request.readyState);
+            console.log("status = " + request.status);
         }
     }
 
