@@ -7,6 +7,7 @@
     // Returns an HTTP request object
     function getRequestObject() {
         if(window.XMLHttpRequest) {
+            console.log("XMLHttpRequest = " + window.XMLHttpRequest);
             return (new XMLHttpRequest());
         }
         else if (window.ActiveXObject) {
@@ -22,10 +23,12 @@
     ajaxUtils.sendGetRequest =
         function(requestUrl, responseHandler, isJsonResponse) {
             var request = getRequestObject();
+            console.log("request = " + request);
             request.onreadystatechange = 
             function() {
                 handleResponse(request, responseHandler, isJsonResponse);
             }
+            console.log("request.onreadystatechange = " + request.onreadystatechange);
             request.open("GET", requestUrl, true); // true = Asynchronus
             request.send(null); // for POST only
         };
