@@ -7,6 +7,7 @@
     // Returns an HTTP request object
     function getRequestObject() {
         if(window.XMLHttpRequest) {
+            console.log(window.XMLHttpRequest);
             return (new XMLHttpRequest());
         }
         else if (window.ActiveXObject) {
@@ -18,7 +19,7 @@
             return(null);
         }
     }
-    // Makes an Ajax GET request to 'requestUrl'
+    // Makes an Ajax GET request to 'requestUrl' - Send a request to the server
     ajaxUtils.sendGetRequest =
         function(requestUrl, responseHandler) {
             var request = getRequestObject();
@@ -39,8 +40,8 @@
 
         }
         else {
-            console.log("status = " + request.readyState);
-            console.log("status = " + request.status);
+            //console.log("status = " + request.readyState);
+            //console.log("status = " + request.status);
         }
     }
 
